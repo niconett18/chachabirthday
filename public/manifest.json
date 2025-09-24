@@ -1,0 +1,25 @@
+{
+  "name": "Chacha's 19th Birthday",
+  "short_name": "Chacha 19",
+  "description": "A magical, interactive birthday site made with love.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF5FA",
+  "theme_color": "#FF66A3",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "personalization"]
+}
