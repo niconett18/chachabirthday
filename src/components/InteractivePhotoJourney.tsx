@@ -102,21 +102,21 @@ export function InteractivePhotoJourney({ photos }: InteractivePhotoJourneyProps
   const currentPhoto = shuffledPhotos[currentPhotoIndex];
 
   return (
-    <div className="min-h-dvh flex flex-col" style={{ 
-      paddingTop: 'env(safe-area-inset-top)', 
-      paddingBottom: 'env(safe-area-inset-bottom)' 
-    }}>
-      {/* Header */}
+    <div className="min-h-dvh flex flex-col bg-white">
+      {/* Header with proper safe area */}
       <motion.div 
-        className="p-3 text-center bg-white/90 backdrop-blur-sm"
+        className="p-4 text-center bg-gradient-to-r from-pink-500 to-rose-500 shadow-lg sticky top-0 z-10"
+        style={{ 
+          paddingTop: 'calc(1rem + env(safe-area-inset-top))',
+        }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="font-display text-lg font-semibold text-[#37243B] mb-1">
+        <h1 className="font-display text-xl md:text-2xl font-bold text-white mb-2 drop-shadow-md">
           Our Memories ✨
         </h1>
-        <p className="text-xs text-[#37243B]/60">
+        <p className="text-sm md:text-base text-white/90 font-medium">
           {currentPhotoIndex + 1} of {shuffledPhotos.length}
         </p>
       </motion.div>
@@ -214,7 +214,8 @@ export function InteractivePhotoJourney({ photos }: InteractivePhotoJourneyProps
       </div>
 
       {/* Controls */}
-      <div className="bg-white/95 backdrop-blur-sm p-3 space-y-3">
+      <div className="bg-white/95 backdrop-blur-sm p-3 space-y-3 border-t border-pink-100" 
+           style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}>
         {/* Navigation */}
         <div className="flex items-center justify-center gap-6">
           <motion.button
